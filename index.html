@@ -9,30 +9,70 @@
 
 <body>    
 
-    <div id="main">
+    <div>
 
+        <!--Background and introduction-->
         <div>
 
             <h1 id="heading">Exploratory Data Analysis: Developer Statistics</h1>
             <h2 id="heading_2">Data Background, Purpose, and Biases</h2>
-            <p id="synopsis">The raw data used in this analysis derives from a Stack Overflow Developer survey completed<br>
-            in 2025. It measures multiple variables of over 49,000 developers such as converted salary, age group,<br>
-            highest education level and more. The raw data can be found <a href="https://survey.stackoverflow.co/">here.</a><br>
-            The data captures an overview of the experiences of developers in 2025 across many circumstances.<br>
-            Some of the biases present in the data are inaccurate/incomplete values entered and participant bias. Elaborating on<br>
-            these biases, for some entries in the raw data, inaccurate values were entered such as when it came to asking how many<br>
-            years the individual had been coding for, some participants responded with "100." As for participant bias, some<br>
-            individuals who took the survey may have responded in a way that fits the expectations of the surveyor.
+            <p id="synopsis">
+                The raw data used in this analysis derives from a Stack Overflow Developer survey completed<br>
+                in 2025. It measures multiple variables of over 49,000 developers such as converted salary, age group,<br>
+                highest education level and more. The raw data can be found <a href="https://survey.stackoverflow.co/">here.</a><br>
+            </p>
 
+            <p>
+                The data captures an overview of the experiences of developers in 2025 across many circumstances.<br>
+                Some of the biases present in the data are inaccurate/incomplete values entered and participant bias.<br>
+                Elaborating on these biases, for some entries in the raw data, inaccurate values were entered such as<br>
+                when it came to asking how many years the individual had been coding for, some participants responded with<br>
+                "100." As for participant bias, some individuals who took the survey may have responded in a way that fits<br>
+                the expectations of the surveyor.
             </p>
 
         </div>
 
+        <!--Data/statistics-->
         <div>
 
             <h2 id = "heading_2">Summary Statistics and Visualizations</h2>
-            <h3>Visual 1: Salary</h3>
-            <img src="salary.png" class="small-img" alt="Boxplot of salary in USD">
+
+            <!--visual 1-->
+            <div>
+
+                <h3>Visual 1, Quantitative: Salary</h3>
+                <img src="salary.png" class="small-img" alt="Boxplot of salary in USD">
+                <p class="statistics">Summary Statistics:</p>
+                <ul class="statistics">
+                    <li>count: 11726.000000</li>
+                    <li>mean: 93578.011513</li>
+                    <li>std: 70040.975205</li>
+                    <li>min: 65.000000</li>
+                    <li>25%: 44086.000000</li>
+                    <li>50%: 81210.000000</li>
+                    <li>75%: 127616.000000/li>
+                    <li>max: 440856.000000</li>
+                </ul>
+                <p>
+                
+                    This visualization shows the distribution of salary in USD across different quartiles. The total number of non-null entries or
+                    count is 11,726. The average (mean) salary is $93,578.01. The standard deviation is $70,040.98, demonstrating a wide range of
+                    salaries. The minimum salary is $65,000, and the first quartile is $44,086 meaning that 25% of the respondents earn $44,086 or
+                    lower. The second quartile is $81,210 meaning that 50% or half of the respondents earn $81,210 or lower. The third quartile is 
+                    $127,616 meaning that 75% of the respondents earn $127,616 or lower. The maximum salary earned is $440,856.
+
+                </p>
+
+            </div>
+
+            
+            <!--visual 2-->
+            <div>
+
+                <h3>Visual 2, Quantitative: Years of Coding Experience</h3>
+
+            </div>
 
         </div>
 

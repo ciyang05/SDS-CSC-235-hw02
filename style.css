@@ -2,9 +2,9 @@ body {
     font-family: Didot;
 }
 
-#main {
+/* #main {
     text-align: center;
-}
+} */
 
 #heading {
     color: cornflowerblue;
@@ -22,4 +22,13 @@ body {
 .small-img {
     width: 550px;
     height: auto;
+    float: left;
+}
+
+.statistics {
+    font-size: 16;
+}
+
+#summary {
+    float: left;
 }
