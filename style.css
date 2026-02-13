@@ -1,0 +1,25 @@
+body { 
+    font-family: Didot;
+}
+
+#main {
+    text-align: center;
+}
+
+#heading {
+    color: cornflowerblue;
+    background: lightyellow;
+}
+
+#heading_2 {
+    color: cornflowerblue;
+}
+
+#synopsis {
+    color: black;
+}
+
+.small-img {
+    width: 550px;
+    height: auto;
+}
