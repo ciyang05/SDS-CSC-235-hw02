@@ -4,12 +4,12 @@ body {
 }
 
 #heading {
-    color: cornflowerblue;
-    background: lightyellow;
+    color: #7852a9;
+    background: #7f1ba63f;
 }
 
 #heading_2 {
-    color: cornflowerblue;
+    color: #7852a9;
 }
 
 #synopsis {
@@ -20,6 +20,11 @@ body {
     width: 550px;
     height: auto;
     float: left;
+}
+
+.small-heading {
+    font-size: 18;
+    font-weight: bold;
 }
 
 .statistics {
