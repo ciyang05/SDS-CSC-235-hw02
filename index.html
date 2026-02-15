@@ -19,10 +19,7 @@
             <p id="synopsis">
                 The raw data used in this analysis derives from a Stack Overflow Developer survey completed<br>
                 in 2025. It measures multiple variables of over 49,000 developers such as converted salary, age group,<br>
-                highest education level and more. The raw data can be found <a href="https://survey.stackoverflow.co/">here.</a><br>
-            </p>
-
-            <p>
+                highest education level and more. The raw data can be found <a href="https://survey.stackoverflow.co/">here.</a><br><br>
                 The data captures an overview of the experiences of developers in 2025 across many circumstances.<br>
                 Some of the biases present in the data are inaccurate/incomplete values entered and participant bias.<br>
                 Elaborating on these biases, for some entries in the raw data, inaccurate values were entered such as<br>
@@ -30,6 +27,8 @@
                 "100." As for participant bias, some individuals who took the survey may have responded in a way that fits<br>
                 the expectations of the surveyor.
             </p>
+            <button onclick="highlightOn()">Highlight and bold this section</button>
+            <button onclick = "highlightOff()">Turn off highlight and bold</button>
 
         </div>
 
@@ -44,7 +43,7 @@
                 <h3>Visual 1, Quantitative: Salary</h3>
                 <img src="salary.png" class="small-img" alt="Boxplot of salary in USD">
                 <p class="small-heading">Summary Statistics:</p>
-                <ul class="statistics">
+                <ul class="statistics", onmouseover="myOverFunction()">
                     <li>Count: 11726.000000</li>
                     <li>Mean: 93578.011513</li>
                     <li>Std: 70040.975205</li>
@@ -54,7 +53,7 @@
                     <li>75%: 127616.000000/li>
                     <li>Max: 440856.000000</li>
                 </ul>
-                <p>
+                <p class="description">
                 
                     This visualization shows the distribution of salary in USD across different quartiles. The total number of non-null entries or
                     count is 11,726. The average (mean) salary is $93,578.01. The standard deviation is $70,040.98, demonstrating a wide range of
@@ -85,7 +84,7 @@
                     <li>75%: 25.000000</li>
                     <li>Max: 46.000000</li>
                 </ul>
-                <p>
+                <p class="description"> 
                 
                     This visualization shows the distribution of coding experience in years. The total number of non-null entries or
                     count is 11,726. The average (mean) coding experience is 17.81 years. The standard deviation is 10 years, demonstrating a relatively 
@@ -111,7 +110,7 @@
                     <li>Top: Bachelor’s degree (B.A., B.S., B.Eng., etc.)</li>
                     <li>Freq: 5,305</li>
                 </ul>
-                <p>
+                <p class="description">
 
                     This visualization shows the frequency of respondents by highest education level obtained. The total number of non-null entries or
                     count is 11,726. There are 8 unique categories corresponding to the different education levels. A bachelor's degree had the highest
@@ -139,7 +138,7 @@
                     <li>75%: 8.000000</li>
                     <li>Max: 10.000000</li>
                 </ul>
-                <p>
+                <p class="description">
 
                     This visualization shows the frequency of respondents by job satisfaction from 0-10 in which 0 is the lowest and 10 is the highest.
                     The total number of non-null entries or count is 11,726. The average (mean) job satisfaction is 7.27. The standard deviation is 1.90, 
@@ -165,7 +164,7 @@
                     <li>Top: Software Development</li>
                     <li>Freq: 6,033</li>
                 </ul>
-                <p>
+                <p class="description">
 
                     This visualization shows the frequency of respondents by the industry they are currently working in. The total number of non-null entries 
                     or count is 11,726. There are 15 unique categories corresponding to the different industries. Software development had the highest
@@ -190,7 +189,7 @@
                     <li>Freq: 450</li>
 
                 </ul>
-                <p>
+                <p class="description">
 
                     This visualization shows the frequency of respondents by their view of AI as a threat to their career. The total number of non-null 
                     entries or count is 11,726. There are 3 unique categories corresponding to the responses "Yes", "Not Sure", and "No." The response
@@ -202,37 +201,86 @@
 
             </div>
 
+            <!--hypotheses w/visualizations-->
+
             <h2 id = "heading_2">Visualizations and Hypotheses</h2>
 
             <!--visual 1: Salary vs. Coding Exp-->
-            <h3>Visual 1: Years of Coding Experience vs. Salary (USD)</h3>
-            <img src="Salary vs Coding Exp.png" class="small-img-2" alt="Coding Exp vs. Salary">
-            <p class="small-heading">
-                Hypothesis: There is no relationship between years of coding experience and salary earned. 
-            </p>
-            <p class="statistics">
+            <div>
 
-                In this visualization, there is no apparent correlation between salary and coding experience. Respondents who have 10-20 years of coding
-                experience received just as high of a salary as respondents who have 30-40 years of experience. We see that as the years get greater, the 
-                number of respondents became more sparse. This may have an effect on how the visualization is interpreted. However, there appears to be no
-                negative or positive correlation.
+                <h3>Visual 1: Years of Coding Experience vs. Salary (USD)</h3>
+                <img src="Salary vs Coding Exp.png" class="small-img-2" alt="Coding Exp vs. Salary">
+                <p class="small-heading">
 
-            </p>
+                    Hypothesis: There is no relationship between years of coding experience and salary earned. 
 
+                </p>
+                <p class="description">
+
+                    In this visualization, there is no apparent correlation between salary and coding experience. Respondents who have 10-20 years of coding
+                    experience received just as high of a salary as respondents who have 30-40 years of experience. We see that as the years get greater, the 
+                    number of respondents became more sparse. This may have an effect on how the visualization is interpreted. However, there appears to be no
+                    negative or positive correlation.
+
+                </p>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            <!--visual 2: Avg Job Satisfaction per Industry-->
+            <div>
+
+                <h3>Visual 2: Average Job Satisfaction per Industry</h3>
+                <img src="JobSat and Industry.png" class="small-img-2" alt="Job Sat per Industry">
+                <p class="small-heading">
+
+                    Hypothesis: On average, job satisfaction across all recorded industries appears to be relatively the same with computer systems design and 
+                    energy as the highest. 
+
+                </p>
+                <p class="description">
+
+                    In this visualization, average job satisfaction across all recorded industries ranges from 6 to 7.5. There is no significant difference 
+                    between the different sectors. However, computer systems design and energy appears to have the highest job satisfaction. Thus, we can 
+                    conclude that average job satisfaction across different industries is similar with computer systems design and energy as the greatest.
+
+                </p>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            <!--visual 3: Avg Salary by Highest Education Level-->
+            <div>
+
+                <h3>Visual 3: Average Salary by Highest Education Level</h3>
+                <img src="education level salary.png" class="small-img-2" alt="avg salary by highest education level">
+                <p class="small-heading">
+
+                    Hypothesis: On average, developers with a professional degree (JD, MD, Ph.D, Ed.D, etc.) obtain higher salaries.
+
+                </p>
+                <p class="description">
+
+                    In this visualization, it appears that average salaries across education levels vary significantly. When comparing the different education
+                    levels, respondents who received another ("other") form of education earn less on average at around $70,000 while respondents with a 
+                    professional degree ("prof") earn the most on average at over $100,000 followed by respondents who earned a Master's. 
+
+                </p>
+
+                <div class="clearfix"></div>
+
+            </div>
 
         </div>   
 
-
     </div>
+
+    <script src="index.js"></script>
 
 </body>
 
-
-
-
 </html>
-
-
-
 
 </DOCTYPE>

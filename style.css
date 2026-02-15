@@ -16,12 +16,6 @@ body {
     color: black;
 }
 
-.small-img {
-    width: 550px;
-    height: auto;
-    float: left;
-}
-
 .small-heading {
     font-size: 18;
     font-weight: bold;
@@ -31,6 +25,11 @@ body {
     font-size: 16;
 }
 
+.description {
+    font-size: 16;
+}
+
+
 #summary {
     float: left;
 }
@@ -39,9 +38,24 @@ body {
     clear: both;
 }
 
+.small-img {
+    width: 550px;
+    height: auto;
+    float: left;
+}
+
 .small-img-2 {
     width: 550px;
     height: auto;
     margin-right: 30px;
     float: left;
 } 
+
+.highlight {
+    background-color: #7f1ba63f;
+}
+
+.highlight-bold {
+    background-color: #7f1ba63f;
+    font-weight: bold;
+}
